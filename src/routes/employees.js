@@ -11,6 +11,7 @@ router.get('/',(req,res)=>{
         }
         else{
             console.log(err);
+            res.json({Status: 'Error al recuperar la informacion'});
         }
     });
 });
@@ -24,6 +25,7 @@ router.get('/:id',(req,res)=>{
         }
         else{
             console.log(err);
+            res.json({Status: 'Error al recuperar la informacion'});
         }
     });
 });
@@ -48,6 +50,7 @@ router.post('/',(req,res) =>{
             }
             else{
                 console.log(err);
+                res.json({Status: 'Error saving employee'})
             }
     
         });
